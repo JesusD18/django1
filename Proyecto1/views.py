@@ -1,7 +1,4 @@
 from django.http import HttpResponse
 
-def saludo(request):
-    return HttpResponse("Mi primer página con Django Jesus Alejandro Diaz Serafin")
-
-def despedida(request):
-    return HttpResponse("Seguiremos aprendiendo Django ")
+def home(request):
+    return HttpResponse("<h1>Bienvenido a mi proyecto Django en Vercel</h1><p>Todo funciona correctamente 🎉</p>")
