@@ -50,12 +50,11 @@ def home(request):
     </head>
     <body>
         <div class="card">
-            <h1>✨ Bienvenido a mi proyecto Django en Vercel ✨</h1>
+            <h1>Bienvenido a mi proyecto Django en Vercel</h1>
             <p>Tu despliegue está funcionando correctamente.</p>
             <a href="/admin/">Ir al panel de administración</a>
         </div>
     </body>
     </html>
     """
-
     return HttpResponse(html)
