@@ -16,6 +16,11 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
+    import os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Proyecto1.settings")
+from django.core.wsgi import get_wsgi_application
+app = get_wsgi_application()
+
 
 
 if __name__ == '__main__':
