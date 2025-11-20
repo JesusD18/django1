@@ -3,10 +3,14 @@
 import os
 import sys
 
+# === Necesario para Vercel Serverless ===
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Proyecto1.settings")
+from django.core.wsgi import get_wsgi_application
+app = get_wsgi_application()
+# ========================================
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Proyecto1.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -16,11 +20,6 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
-    import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Proyecto1.settings")
-from django.core.wsgi import get_wsgi_application
-app = get_wsgi_application()
-
 
 
 if __name__ == '__main__':
